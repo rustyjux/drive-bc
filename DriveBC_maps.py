@@ -39,8 +39,7 @@ def getdata(records = "500"):
 
         # flatten the nested dictionary 
         df = pd.json_normalize(jsondata, record_path =['events'])
-        #print(df)
-
+       
         # remove unnecessary columns
         del df['jurisdiction_url'], df['+ivr_message'], df['+linear_reference_km']
         try:
